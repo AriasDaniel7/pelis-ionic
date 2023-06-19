@@ -1,0 +1,7 @@
+{
+  "name": "pelis",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
