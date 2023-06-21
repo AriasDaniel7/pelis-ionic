@@ -5,13 +5,22 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>Drama</ion-title>
+    <ion-title class="title" slot="end">PelisPlus</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">drama</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <a href="/reproducir?nombre={{peli.titulo}}" *ngFor="let peli of peliculasFiltradas">
+    <ion-card>
+      <img class="img" alt="Silhouette of mountains" src="{{peli.img}}" />
+      <ion-card-header>
+        <ion-card-title>{{peli.titulo}}</ion-card-title>
+        <ion-card-subtitle>{{peli.subtitulo}}</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        {{peli.descripcion}}
+      </ion-card-content>
+    </ion-card>
+  </a>
 </ion-content>

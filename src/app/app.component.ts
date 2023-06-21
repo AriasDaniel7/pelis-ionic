@@ -12,7 +12,8 @@ export class AppComponent {
     { title: 'Terror', url: '/terror', icon: 'arrow-forward' },
     { title: 'Acción', url: '/accion', icon: 'arrow-forward' },
     { title: 'Drama', url: '/drama', icon: 'arrow-forward' },
-    { title: 'Romance', url: '/romance', icon: 'arrow-forward' }
+    { title: 'Romance', url: '/romance', icon: 'arrow-forward' },
+    { title: 'Salir', url: '/login', icon: 'exit' },
   ];
 
   constructor(private router: Router) {}

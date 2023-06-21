@@ -1,0 +1,16 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/principal"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Reproductor</ion-title>
+    <ion-title class="title" slot="end">PelisPlus</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <iframe class="video" [src]="URLVideo" allowfullscreen allowtransparency allow="autoplay" scrolling="no"
+    frameborder="0"></iframe>
+  <h1>{{templatePeli.titulo}}</h1>
+  <p>{{templatePeli.descripcion}}</p>
+</ion-content>
