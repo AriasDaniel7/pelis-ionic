@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { register } from 'swiper/element/bundle';
+register();
 
 @Component({
   selector: 'app-principal',
@@ -7,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./principal.page.scss'],
 })
 export class PrincipalPage implements OnInit {
-
+  
   constructor(private router: Router) { }
 
   ngOnInit() {

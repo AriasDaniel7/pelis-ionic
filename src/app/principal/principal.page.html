@@ -11,9 +11,21 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <a href="/reproducir?nombre={{peli.titulo}}" *ngFor="let peli of peliculasFiltradas">
+  <div class="slider" *ngIf="peliculasFiltradas === peliculas">
+    <h1>Peliculas de estreno</h1>
+    <swiper-container class="mySwiper" autoplay-delay="2500" autoplay-disable-on-interaction="false"
+      pagination-dynamic-bullets="true" space-between="30" loop="true">
+      <swiper-slide *ngFor="let peli of peliculas">
+        <a href="/reproducir?nombre={{peli.titulo}}">
+          <img class="slider-img" src="{{peli.img}}" alt="Imagen pelicula">
+        </a>
+      </swiper-slide>
+    </swiper-container>
+  </div>
+
+  <a class="card" href="/reproducir?nombre={{peli.titulo}}" *ngFor="let peli of peliculasFiltradas">
     <ion-card>
-      <img class="img" alt="Silhouette of mountains" src="{{peli.img}}" />
+      <img class="img" alt="Imagen pelicula" src="{{peli.img}}" />
       <ion-card-header>
         <ion-card-title>{{peli.titulo}}</ion-card-title>
         <ion-card-subtitle>{{peli.subtitulo}}</ion-card-subtitle>
